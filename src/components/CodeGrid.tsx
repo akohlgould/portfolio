@@ -6,9 +6,7 @@ import { useState } from 'react';
 const CodeGrid = () => {
     return (
         <div className="w-full py-20 min-h-screen bg-slate-900">
-            <h2 className="text-3xl font-mono text-white mb-8 text-center border-b border-blue-500 pb-4">
-                &lt;Projects /&gt;
-            </h2>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {codeProjects.map((item, index) => (
                     <CodeCard key={item.id} item={item} index={index} />

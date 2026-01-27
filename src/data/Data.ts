@@ -45,17 +45,24 @@ export const sculptures: Project[] = [
     {
         id: 4,
         title: "Chest",
-        description: "Inverse plaster cast of my chest. Includes a small about of hair. Sized as a coffee table.",
+        description: "Inverse plaster cast of chest. Includes a small about of hair. Sized as a coffee table.",
         images: [
             "public/Photos/Chest/0BA7C585-9527-4CED-9B80-CC3D3AFAA376_1_102_o.jpeg",
             "public/Photos/Chest/008669D5-6359-4426-BA62-1D2EFC14F297_4_5005_c.jpeg",
-            "public/Photos/Chest/22359515-1D3E-4CC0-98F5-24D9DB9DB0AA_1_105_c.jpeg",
-            "public/Photos/Chest/CFAD5F90-11D1-4436-91E0-0766F9165EE3_1_105_c.jpeg",
             "public/Photos/Chest/D8A2892A-7817-46DC-9E96-EE2B0FE63761_4_5005_c.jpeg",
             "public/Photos/Chest/E2D6E6F6-010E-44EF-8500-B89BF897F4C2_1_102_o.jpeg",
             "public/Photos/Chest/E13F9ECB-71E4-4E53-92DE-E5D1B3A346A8_1_102_o.jpeg",
         ],
-        tags: ["Wood"],
+        tags: ["Plaster", "Human Hair"],
+    },
+    {
+        id: 5,
+        title: "Cube",
+        description: "Cubic book.",
+        images: [
+            "public/Photos/Cube/IMG_5258.jpg",
+        ],
+        tags: ["Book Arts"],
     },
 ];
 
@@ -65,8 +72,8 @@ export const codeProjects: Project[] = [
         title: "Siddur Translation Viewer",
         description: "A site that allows you to view the Hebrew text of the Siddur with alongside multiple different English translation.",
         images: [
-            "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=800&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=800&auto=format&fit=crop" // Mock interface screenshots
+            "public/Photos/Siddur/Between.png",
+            "public/Photos/Siddur/Tefillin.png" // Mock interface screenshots
         ],
         tags: ["HTML"],
         demoUrl: "https://www.siddur.xyz"
