@@ -70,12 +70,26 @@ const CodeCard = ({ item, index }: { item: typeof codeProjects[0], index: number
             </div>
 
             <div className="flex gap-4">
-                <button className="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-white transition-colors">
-                    <Github size={14} /> View Source
-                </button>
-                <button className="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-white transition-colors">
-                    <ExternalLink size={14} /> Demo
-                </button>
+                {item.githubUrl && (
+                    <a
+                        href={item.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-white transition-colors"
+                    >
+                        <Github size={14} /> View Source
+                    </a>
+                )}
+                {item.demoUrl && (
+                    <a
+                        href={item.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-white transition-colors"
+                    >
+                        <ExternalLink size={14} /> Demo
+                    </a>
+                )}
             </div>
         </motion.div>
     );

@@ -4,6 +4,8 @@ export interface Project {
     description: string;
     images: string[]; // Array of image URLs
     tags: string[];
+    githubUrl?: string; // Optional URL for source code
+    demoUrl?: string;   // Optional URL for live demo
 }
 
 export const sculptures: Project[] = [
@@ -60,30 +62,25 @@ export const sculptures: Project[] = [
 export const codeProjects: Project[] = [
     {
         id: 1,
-        title: "Cat Generator 3000",
-        description: "A very serious tool that generates infinite cats wearing hats. Uses the CATAAS API.",
+        title: "Siddur Translation Viewer",
+        description: "A site that allows you to view the Hebrew text of the Siddur with alongside multiple different English translation.",
         images: [
             "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=800&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=800&auto=format&fit=crop" // Mock interface screenshots
         ],
-        tags: ["React", "API", "Chaos"],
+        tags: ["HTML"],
+        demoUrl: "https://www.siddur.xyz"
+
     },
     {
         id: 2,
-        title: "Infinite Pizza Slicer",
-        description: "A geometric game where you have to slice a pizza into perfectly equal primes.",
+        title: "Darshan AI",
+        description: "A Gemini powered AI tool for generating sourcesheets for Jewish education.",
         images: [
-            "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800&auto=format&fit=crop"
+            "Photos/Darshan/Screenshot 2026-01-26 at 10.27.41 PM.png",
+            "Photos/Darshan/Screenshot 2026-01-26 at 10.31.05 PM.png"
         ],
-        tags: ["Canvas", "Math", "Delicious"],
-    },
-    {
-        id: 3,
-        title: "Mood Ring for Terminal",
-        description: "Changes your terminal background color based on your typing speed and error rate.",
-        images: [
-            "https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=800&auto=format&fit=crop"
-        ],
-        tags: ["Bash", "Silly", "Utility"],
-    },
+        tags: ["React", "AI", "Google Cloud"],
+        demoUrl: "https://darshan.siddur.xyz"
+    }
 ];
