@@ -2,10 +2,10 @@ export interface Project {
     id: number;
     title: string;
     description: string;
-    images: string[]; // Array of image URLs
+    images: string[];
     tags: string[];
-    githubUrl?: string; // Optional URL for source code
-    demoUrl?: string;   // Optional URL for live demo
+    githubUrl?: string;
+    demoUrl?: string;
 }
 
 export const sculptures: Project[] = [

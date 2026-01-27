@@ -17,8 +17,6 @@ const CodeGrid = () => {
 };
 
 const CodeCard = ({ item, index }: { item: typeof codeProjects[0], index: number }) => {
-    // For code, maybe we just cycle on hover? Or keep it simple with first image for now
-    // Let's do a simple hover cycle if multiple images exist
     const [imgIndex, setImgIndex] = useState(0);
 
     return (
@@ -30,14 +28,11 @@ const CodeCard = ({ item, index }: { item: typeof codeProjects[0], index: number
             className="bg-slate-800 border-2 border-slate-600 p-6 rounded-lg hover:border-blue-400 transition-colors group relative overflow-hidden shadow-2xl"
             onMouseEnter={() => {
                 if (item.images.length > 1) {
-                    // Auto cycle on hover? Or just show second image
-                    // Simple implementation: show second image on hover if available
                     setImgIndex(1 % item.images.length);
                 }
             }}
             onMouseLeave={() => setImgIndex(0)}
         >
-            {/* Glitch effect overlay on hover could go here */}
             <div className="absolute top-0 right-0 p-4 opacity-100 transition-opacity z-10">
                 <Terminal size={24} className="text-blue-400" />
             </div>
