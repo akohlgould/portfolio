@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import type { Education } from '../data/Data';
-import { GraduationCap } from 'lucide-react';
+
 
 interface EducationSectionProps {
     education: Education;
@@ -15,8 +15,12 @@ const EducationSection = ({ education }: EducationSectionProps) => {
             transition={{ duration: 0.5 }}
             className="mt-16 p-8 rounded-2xl border border-stone-200 bg-stone-50 shadow-sm flex flex-col md:flex-row items-center gap-6"
         >
-            <div className="w-16 h-16 rounded-full bg-stone-200 flex items-center justify-center text-stone-600 shrink-0">
-                <GraduationCap size={32} />
+            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shrink-0 border border-stone-200 shadow-sm overflow-hidden">
+                <img 
+                    src="/images/brandeis-logo.png" 
+                    alt="Brandeis University Logo" 
+                    className="w-full h-full object-contain p-1"
+                />
             </div>
             <div className="text-center md:text-left">
                 <h3 className="text-2xl font-bold text-stone-900 mb-1">{education.institution}</h3>
