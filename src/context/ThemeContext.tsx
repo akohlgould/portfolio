@@ -1,28 +1,23 @@
 import { createContext, useContext, useState, type ReactNode } from 'react';
 
-type Mode = 'art' | 'code';
+export type Mode = 'art' | 'code' | 'about';
 
 interface ThemeContextType {
     mode: Mode;
     setMode: (mode: Mode) => void;
-    toggleMode: () => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-    const [mode, setMode] = useState<Mode>('art');
-
-    const toggleMode = () => {
-        setMode((prev) => (prev === 'art' ? 'code' : 'art'));
-    };
+    const [mode, setMode] = useState<Mode>('about');
 
     return (
-        <ThemeContext.Provider value={{ mode, setMode, toggleMode }}>
+        <ThemeContext.Provider value={{ mode, setMode }}>
             {children}
         </ThemeContext.Provider>
     );
-};
+}
 
 export const useTheme = () => {
     const context = useContext(ThemeContext);

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { codeProjects } from '../data/Data';
-import { Terminal, Github, ExternalLink } from 'lucide-react';
+import { Terminal, Github, ExternalLink, Puzzle } from 'lucide-react';
 import { useState } from 'react';
 
 const CodeGrid = () => {
@@ -81,6 +81,16 @@ const CodeCard = ({ item, index }: { item: typeof codeProjects[0], index: number
                         className="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-white transition-colors"
                     >
                         <ExternalLink size={14} /> Demo
+                    </a>
+                )}
+                {item.extensionUrl && (
+                    <a
+                        href={item.extensionUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-white transition-colors"
+                    >
+                        <Puzzle size={14} /> Extension
                     </a>
                 )}
             </div>

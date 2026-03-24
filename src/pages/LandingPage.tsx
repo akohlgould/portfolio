@@ -2,17 +2,18 @@ import { useTheme } from '../context/ThemeContext';
 
 import SculptureGrid from '../components/SculptureGrid';
 import CodeGrid from '../components/CodeGrid';
+import AboutPage from './AboutPage';
 
 const LandingPage = () => {
     const { mode } = useTheme();
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-[80vh] text-center">
-
-
+        <div className="w-full">
             {/* Dynamic Content Section */}
             <div className="w-full min-h-screen">
-                {mode === 'art' ? <SculptureGrid /> : <CodeGrid />}
+                {mode === 'art' ? <SculptureGrid /> : 
+                 mode === 'code' ? <CodeGrid /> : 
+                 <AboutPage />}
             </div>
         </div>
     );

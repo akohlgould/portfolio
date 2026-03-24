@@ -6,6 +6,23 @@ export interface Project {
     tags: string[];
     githubUrl?: string;
     demoUrl?: string;
+    extensionUrl?: string;
+}
+
+export interface Experience {
+    id: number;
+    title: string;
+    organization: string;
+    location: string;
+    dateRange: string;
+    bulletPoints: string[];
+}
+
+export interface Education {
+    institution: string;
+    degree: string;
+    expectedDate: string;
+    gpa: string;
 }
 
 export const sculptures: Project[] = [
@@ -69,8 +86,20 @@ export const sculptures: Project[] = [
 export const codeProjects: Project[] = [
     {
         id: 1,
+        title: "Lashon Learning",
+        description: "A webpage and browser extension for memorizing Hebrew vocabulary, from Sefaria sources.",
+        images: [
+            "/public/Photos/LashonLearning/LashonLearning1.png"
+        ],
+        tags: ["React", "Vite", "TailwindCSS", "Sefaria REST API"],
+        demoUrl: "https://akohlgould.github.io/LashonLearning/",
+        githubUrl: "https://github.com/akohlgould/LashonLearning",
+        extensionUrl: "https://chromewebstore.google.com/detail/lashonlearning-extension/mapphefolnefhibcikdlcdhojooagegh"
+    },
+    {
+        id: 2,
         title: "Siddur Translation Viewer",
-        description: "A site that allows you to view the Hebrew text of the Siddur with alongside multiple different English translation.",
+        description: "Hebrew prayer book viewer with side-by-side English translations.",
         images: [
             "public/Photos/Siddur/Between.png",
             "public/Photos/Siddur/Tefillin.png" // Mock interface screenshots
@@ -80,7 +109,7 @@ export const codeProjects: Project[] = [
 
     },
     {
-        id: 2,
+        id: 3,
         title: "Darshan AI",
         description: "A Gemini powered AI tool for generating sourcesheets for Jewish education.",
         images: [
@@ -91,3 +120,72 @@ export const codeProjects: Project[] = [
         demoUrl: "https://darshan.siddur.xyz"
     }
 ];
+
+export const experienceData: Experience[] = [
+    {
+        id: 1,
+        title: "Data Analyst Intern",
+        organization: "Phamily",
+        location: "Remote",
+        dateRange: "Feb 2026–Present",
+        bulletPoints: [
+            "Clean and import data using Excel into the chronic care management platform.",
+            "Generate analytical reports from incoming data, focusing on enrollment metrics to inform client insights and strategic planning.",
+            "Develop and execute targeted outreach strategies within the platform, managing message deployment and follow-up sequences to drive service enrollment."
+        ]
+    },
+    {
+        id: 2,
+        title: "Digital Operations Intern",
+        organization: "Princeton Institute for Hasidic Thought",
+        location: "Princeton, NJ",
+        dateRange: "May 2025–Sep 2025",
+        bulletPoints: [
+            "Contributed to digital brand identity development by providing design and technical input on visual style, layout, and online presence.",
+            "Coordinated logistics and provided on-site support for an intensive retreat serving the institute's translation fellowship."
+        ]
+    },
+    {
+        id: 3,
+        title: "Political Assistant",
+        organization: "Harris for President",
+        location: "Manchester, NH",
+        dateRange: "May 2024–Nov 2024",
+        bulletPoints: [
+            "Drafted memos and briefing statements for President Biden, Vice President Harris, senators, and dozens of key surrogates for NH travel.",
+            "Planned and coordinated end-to-end campaign events, led on-site teams.",
+            "Cultivated and maintained relationships with hundreds of elected officials and key party activists.",
+            "Managed the volunteer-exempt mail program and ensured compliance with federal regulations.",
+            "Worked closely with the data team to ensure accurate reporting of event outcomes."
+        ]
+    },
+    {
+        id: 4,
+        title: "Special Projects Coordinator",
+        organization: "Central Square Business Improvement District",
+        location: "Cambridge, MA",
+        dateRange: "Mar 2023–Aug 2023",
+        bulletPoints: [
+            "Managed and optimized office technology systems, troubleshooting software and hardware issues.",
+            "Developed and strengthened relationships with local small businesses, serving as a liaison between business owners and the BID to support community engagement and economic growth."
+        ]
+    },
+    {
+        id: 5,
+        title: "Software Operations Associate",
+        organization: "March On",
+        location: "Remote",
+        dateRange: "Jun 2021–Sep 2021",
+        bulletPoints: [
+            "Evaluated and recommended SaaS software to improve operational efficiency and digital collaboration across the nonprofit.",
+            "Managed data systems, ensuring accuracy and accessibility for staff needs."
+        ]
+    }
+];
+
+export const educationData: Education = {
+    institution: "Brandeis University",
+    degree: "B.S. Computer Science",
+    expectedDate: "Expected May 2027",
+    gpa: "3.6 GPA"
+};

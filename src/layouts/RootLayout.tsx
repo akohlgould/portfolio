@@ -11,15 +11,22 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <motion.div
                 initial={false}
                 animate={{
-                    backgroundColor: mode === 'art' ? '#f5f5f4' : '#0f172a', // stone-100 vs slate-900
+                    backgroundColor: 
+                        mode === 'art' ? '#f5f5f4' : 
+                        mode === 'code' ? '#0f172a' : 
+                        '#ececeb', // Bridging neutral
                 }}
                 className="absolute inset-0 z-0"
             />
 
             {/* Content Layer */}
-            <div className={`relative z-10 transition-all duration-700 ${mode === 'art' ? 'font-serif text-stone-900' : 'font-mono text-slate-100'}`}>
+            <div className={`relative z-10 transition-all duration-700 ${
+                mode === 'art' ? 'font-serif text-stone-900' : 
+                mode === 'code' ? 'font-mono text-slate-100' : 
+                'font-serif text-stone-900 tracking-tight' // Bridge: serif but more compressed/modern
+            }`}>
                 <Navigation />
-                <main className="pt-24 px-6 md:px-12 max-w-7xl mx-auto">
+                <main className="pt-24 px-6 md:px-12 max-w-7xl mx-auto min-h-screen">
                     {children}
                 </main>
             </div>
