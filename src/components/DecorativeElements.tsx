@@ -8,7 +8,7 @@ export const BridgeElements = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 0.4, scale: 1 }}
                 transition={{ duration: 2, repeat: Infinity, repeatType: 'reverse' }}
-                className="absolute -top-20 -left-20 w-96 h-96 bg-stone-200/50 rounded-full blur-3xl"
+                className="absolute -bottom-20 -left-20 w-96 h-96 bg-stone-200/50 rounded-full blur-3xl"
             />
             
             {/* Geometric grid (Dev-inspired) */}
